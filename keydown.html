@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="key" style="width: 200px;height: 200px;background-color: pur; border: solid black 1px;"></div>
+  <script>
+var color = 'white'
+
+document.addEventListener("keydown", function(event){
+  if (event.key === 'a') {
+    color ='pink'
+  } else if (event.key === 's') {
+    color = 'orange'
+  } else if (event.key === 'd') {
+    color ='cyan' 
+  } else
+    color = 'white' 
+  let div  = document.getElementById('key')
+  div.style.backgroundColor = color
+  })
+
+function agregar_div(div_color){
+  contenedor = document.querySelector('body')
+  nuevo_div = document.createElement("div")
+  nuevo_div.style.witdth ='200px'
+  nuevo_div.style.height ='200px'
+  nuevo_div.style.backgroundColor = div_color
+  nuevo_div.style.border='solid black 1px'
+  contenedor.appendChild(nuevo_div)
+}
+
+document.addEventListener("keydown", function(event){
+  if (event.key==='q'){
+    div_color = 'purple'
+  } else if (event.key==='w'){
+    div_color = 'grey'
+  } else if (event.key==='e'){
+    div_color = 'brown'
+  }
+  agregar_div(div_color)
+})
+  </script>
+</body>
+</html>
